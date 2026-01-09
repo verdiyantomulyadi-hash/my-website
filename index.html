@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Nama Kamu</title>
+  <meta name="description" content="Portfolio sederhana: About • Projects • Skills • Contact">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071022 0%, #07192b 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1000px;margin:0 auto;padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+    .brand{font-weight:700;letter-spacing:0.4px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin:28px 0}
+    .hero h1{font-size:34px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#042029;text-decoration:none;font-weight:600}
+    .card{background:var(--glass);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill{display:flex;justify-content:space-between;gap:10px}
+    .skill .bar{flex:1;height:10px;background:#0b1220;border-radius:999px;overflow:hidden;margin-left:10px}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7dd3fc);width:60%}
+    form input,form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    footer{margin:36px 0;color:var(--muted);text-align:center}
+    /* responsive */
+    @media (max-width:800px){.hero{grid-template-columns:1fr;}.brand{font-size:16px}nav{display:none}}
+    /* small nav button */
+    .menu-btn{display:none}
+    @media (max-width:800px){.menu-btn{display:inline-block;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--muted)}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">VERDI — Portfolio</div>
+      <div>
+        <button class="menu-btn" onclick="toggleNav()">Menu</button>
+        <nav id="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Project</a>
+          <a href="#skills">Skill</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <h1>Halo, saya Verdi 👋</h1>
+          <p>Saya siswa dari SMK Paneran Wijaya Kusuma.</p>
+          <a class="btn" href="#projects">Lihat Project</a>
+        </div>
+        <aside class="card">
+          <h3>Tentang singkat</h3>
+          <img src="WhatsApp Image 2025-09-12 at 22.09.05 (1).jpeg" alt="">
+          <p style="color:var(--muted);margin:8px 0 0">Nama: Verdiyanto Mulyadi<br>Bidang: Pelajar<br>Lokasi: Jakarta</p>
+        </aside>
+      </section>
+
+      <section id="about" class="card" style="margin-top:20px">
+        <h2>About</h2>
+        <p style="color:var(--muted)">Saya sedang belajar coding. Senang membuat konten, riset media, dan presentasi.</p>
+      </section>
+
+      <section id="projects" style="margin-top:18px">
+        <h2>Project</h2>
+        <div class="projects">
+          <div class="proj card">
+            <h4>menjadi pengusaha sukses</h4>
+            <p style="color:var(--muted);font-size:14px">Target menjadi pengusaha sukses di umur 23 tahun.</p>
+            <p style="margin:8px 0 0"><a href="#" style="color:var(--accent);text-decoration:none">Lihat detail →</a></p>
+            <img src="WhatsApp Image 2025-09-14 at 03.12.10.jpeg" alt="">
+          </div>
+          <div class="proj card">
+            
+            <h4>Project 2 — Membahagiakan Orang tua</h4>
+            <p style="color:var(--muted);font-size:14px">Saya ingin membahagiakan kedua orang tua saya.</p>
+            <p style="margin:8px 0 0"><a href="#" style="color:var(--accent);text-decoration:none">Lihat detail →</a></p>
+          </div>
+          <div class="proj card">
+
+            <h4>Project 3 — Membuat dirii saya menjadi lebih baik</h4>
+            <p style="color:var(--muted);font-size:14px">Saya inginn membuat diri saya menjadi lebih baik .</p>
+            <p style="margin:8px 0 0"><a href="#" style="color:var(--accent);text-decoration:none">Lihat detail →</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="card" style="margin-top:18px">
+        <h2>Skill</h2>
+        <div class="skills">
+      
+          <div class="skill"><strong>otomotif</strong><div class="bar"><i style="width:85%"></i></div></div>
+          <img src="WhatsApp Image 2025-09-12 at 22.57.23.jpeg" alt=" ">
+          <div class="skill"><strong>bermain biliard</strong><div class="bar"><i style="width:70%"></i></div></div>
+          <img src="WhatsApp Image 2025-09-14 at 03.37.00.jpeg" alt="">
+          <div class="skill"><strong>Public Speaking</strong><div class="bar"><i style="width:75%"></i></div></div>
+          <img src="WhatsApp Image 2025-09-14 at 03.11.08.jpeg" alt="">
+          <div class="skill"><strong>marketing</strong><div class="bar"><i style="width:80%"></i></div></div>
+          <img src="WhatsApp Image 2025-09-14 at 03.33.52.jpeg" alt="">
+        </div>
+      </section>
+
+      <section id="contact" class="card" style="margin-top:18px">
+        <h2>Kontak</h2>
+        <p style="color:var(--muted)">Tertarik kerja sama atau ada pertanyaan? Isi form ini atau hubungi via email/WA.</p>
+        <form onsubmit="sendForm(event)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <input id="name" 085772721367="Nama" required>
+            <input id="email" verdiyanto@gmail.com="Email" required>
+          </div>
+          <input id="subject" placeholder="Subjek" style="margin-top:10px">
+          <textarea id="message" placeholder="Pesan" rows="5" style="margin-top:10px" required></textarea>
+          <div style="margin-top:10px"><button class="btn" type="submit">Kirim</button></div>
+        </form>
+        <p style="color:var(--muted);margin-top:12px">Atau: <a href="mailto:verdiyantomulyadi@gmail.com" style="color:var(--accent)">:verdiyantomulyadi@gmail.com/a> • WA: <a href="https://wa.me/6285772721367" style="color:var(--accent)">+62 812-3456-7890</a></p>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 verdi • Dibuat dengan ❤️
+    </footer>
+  </div>
+
+  <script>
+    function toggleNav(){
+      const nav = document.getElementById('nav');
+      if(nav.style.display==='block') nav.style.display='none'; else nav.style.display='block';
+    }
+    function sendForm(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      const email=document.getElementById('email').value;
+      const subj=document.getElementById('subject').value||'Kontak dari website';
+      const msg=document.getElementById('message').value;
+      // simple: open mail client
+      const mailto = `mailto:april@example.com?subject=${encodeURIComponent(subj+' — from '+name)}&body=${encodeURIComponent(msg+'\n\nContact: '+email)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
